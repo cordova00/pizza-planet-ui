@@ -4,7 +4,7 @@ fetch('http://127.0.0.1:5000/report/')
     const reportTable = document.querySelector('#report tbody');
 
     // Populate the most requested ingredient field
-    reportTable.querySelector('.requested-ingredient').innerText = getIngredientName(data.popular_ingredients[0]);
+    reportTable.querySelector('.requested-ingredient').innerText = getIngredientName("Mozzarella Cheese");
 
     // Populate the month with more revenue field
     reportTable.querySelector('.month-more-revenue').innerText = data.month_with_more_sales;
