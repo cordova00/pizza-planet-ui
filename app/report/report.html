@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="/css/styles.css" />
 
-    <title>L'ultima Cena Pizzeria! - Orders</title>
+    <title>L'ultima Cena Pizzeria! - Report</title>
   </head>
 
   <body>
@@ -40,13 +40,10 @@
             <a class="nav-link" href="/app/ingredient/ingredients.html">Ingredients</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/app/size/sizes.html">Sizes</a>
+            <a class="nav-link" href="/app/beverage/beverages.html">Beverages</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/app/beverage/beverages.html">Beverage</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/app/report/report.html">Report</a>
+            <a class="nav-link" href="/app/size/sizes.html">Report</a>
           </li>
         </ul>
       </nav>
@@ -57,36 +54,40 @@
     <div class="container">
       <div class="jumbotron">
         <div id="order-list">
-          <h2 class="text-center">Orders</h2>
-          <table id="orders" class="table bg-white table-bordered table-hover">
+          <h2 class="text-center">Report</h2>
+          <table id="report" class="table bg-white table-bordered table-hover">
             <thead class="thead-dark">
               <tr class="d-flex">
-                <th class="col-3">Name</th>
-                <th class="col-2">DNI</th>
-                <th class="col-3">Address</th>
-                <th class="col-2 text-right">Total Sale</th>
-                <th class="col-2 text-center">Actions</th>
+                <th class="col-1 text-center">Best ingredient</th>
+                <th class="col-1 text-center">Best month</th>
+                <th colspan="2"class="col-10 text-center">Top 3 customers</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              <tr class="d-flex">
+                <td class="col-1 text-center requested-ingredient"></td>
+                <td class="col-1 text-center month-more-revenue"></td>
+                <td class="col-3 text-center top-customer-1">
+                  <div class="customer-row">
+                    <div class="col-12 text-center">Customer name and total spent</div>
+                  </div>
+                </td>
+                <td class="col-3 text-center top-customer-2">
+                  <div class="customer-row">
+                    <div class="col-12 text-center">Customer name and total spent</div>
+                  </div>
+                </td> 
+                <td class="col-4 text-center top-customer-3">
+                  <div class="customer-row">
+                    <div class="col-12 text-center">Customer name and total spent</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
     </div>
-
-    <template id="order-item-template">
-      <tr class="d-flex">
-        <td class="col-3">{{client_name}}</td>
-        <td class="col-2">{{client_dni}}</td>
-        <td class="col-3">{{client_address}}</td>
-        <td class="col-2 text-right">${{total_price}}</td>
-        <td class="col-2">
-          <div class="text-center">
-            <a class="btn btn-success btn-sm view-order" href="/app/order/order-detail.html?_id={{_id}}">View</a>
-          </div>
-        </td>
-      </tr>
-    </template>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -111,6 +112,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="/js/order/orders.js"></script>
+    <script src="/js/report/report.js"></script>
   </body>
 </html>

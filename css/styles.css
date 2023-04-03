@@ -17,3 +17,20 @@
 .order {
   display: none;
 }
+
+th.col-1.text-center{
+  font-size: 0.8rem;
+}
+
+.col-12.text-center {
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #212529;
+  border-color: #32383e;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.col-12.text-center {
+  padding: 5px
+}
